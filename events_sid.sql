@@ -1,4 +1,4 @@
--- # Mostra os eventos das sessıes activas
+-- # Mostra os eventos das sess√µes activas
      
 column inst_id   format  9999999;
 column sse       format a15
@@ -32,12 +32,12 @@ FROM 	  gV$SESSION a
 	, gV$SESSION_WAIT b
 	WHERE    a.inst_id=b.inst_id 
 	and a.sid=b.sid
-	--AND a.sid in ('&sid')
-	and a.username='JURIS'
+	and a.sid in ('&sid')
+	--and a.username=''
 ORDER BY b.event, a.username, a.logon_time
 /
 
--- Verificar se aparecem sessıes com 
+-- Verificar se aparecem sess√µes com 
 -- Event                       
 -- -----------------------
--- db file scattered read   est„o a fazer full tablescan
+-- db file scattered read   est√£o a fazer full tablescan
