@@ -22,6 +22,7 @@ SELECT a.inst_id, ''''||a.sid||','||a.serial#||'''' sse
 	, SUBSTR (a.program, 1, 30 ) program
 	, a.terminal
 	, a.MACHINE
+	, a.SQL_ID
 	, a.SQL_ADDRESS
 	, a.SQL_HASH_VALUE
 	, b.p1
