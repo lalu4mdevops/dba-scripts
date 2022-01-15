@@ -1,4 +1,4 @@
--- # Mostra os eventos das sessões activas
+-- # Lalu Mostra os eventos das sessões activas
      
 column inst_id   format  9999999;
 column sse       format a15
