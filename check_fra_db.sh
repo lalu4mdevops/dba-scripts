@@ -25,6 +25,7 @@ if [[ $recover_dest_space -ge 20 ]]; then
 	whenever sqlerror exit sql.sqlcode
 	set pagesize 0 feedback off verify off heading off echo off
 	select max(sequence#)-20 from v\\$archived_log where applied = 'YES' and REGISTRAR='RFS' and thread#=1;
+	lalu
 	exit;
 	EOF1`
 
